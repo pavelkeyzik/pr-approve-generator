@@ -1,0 +1,80 @@
+.generator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  min-height: 480px;
+  border-radius: 16px;
+  background-color: #1b202c;
+  background-image: radial-gradient(
+      at 33% 60%,
+      hsla(321, 95%, 58%, 1) 0,
+      hsla(321, 95%, 58%, 0) 50%
+    ),
+    radial-gradient(
+      at 25% 77%,
+      hsla(233, 88%, 53%, 1) 0,
+      hsla(233, 88%, 53%, 0) 50%
+    ),
+    radial-gradient(
+      at 50% 15%,
+      hsla(216, 93%, 51%, 1) 0,
+      hsla(216, 93%, 51%, 0) 50%
+    ),
+    radial-gradient(
+      at 19% 21%,
+      hsla(351, 90%, 56%, 1) 0,
+      hsla(351, 90%, 56%, 0) 50%
+    ),
+    radial-gradient(
+      at 70% 9%,
+      hsla(310, 90%, 68%, 1) 0,
+      hsla(310, 90%, 68%, 0) 50%
+    ),
+    radial-gradient(
+      at 33% 45%,
+      hsla(264, 85%, 51%, 1) 0,
+      hsla(264, 85%, 51%, 0) 50%
+    );
+}
+
+.generator-review {
+  border-radius: 6px;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    line-height: 1.8rem;
+    align-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+  }
+}
+
+.generator-actions {
+  display: flex;
+  gap: 8px;
+
+  &__icon {
+    width: 16px;
+  }
+}

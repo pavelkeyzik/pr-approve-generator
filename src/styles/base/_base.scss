@@ -1,0 +1,47 @@
+:root {
+  --neutral-0: #070707;
+  --neutral-1: #111111;
+  --neutral-8: #9a9a9a;
+  --neutral-9: #fafafa;
+  --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--neutral-0);
+  color: var(--white);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: 800;
+}
+
+p {
+  color: var(--neutral-8);
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--neutral-9);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

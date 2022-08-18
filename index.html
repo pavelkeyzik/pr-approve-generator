@@ -4,18 +4,85 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta
+      name="description"
+      content="Pull Request comment generator to be the non LGTM person"
+    />
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <title>PR Review Generator</title>
   </head>
-  <body>
-    <header>
-      <h1>PR Review Generator</h1>
-      <p>Get rid of LGTM comments in your Pull Requests</p>
+  <body class="container">
+    <header class="header">
+      <div class="header__description">
+        <h1>PR Review Generator</h1>
+        <p>Get rid of LGTM 👍 comments in your PRs</p>
+      </div>
     </header>
     <main>
-      <button id="js-generate">Generate</button>
-      <button id="js-copy">Copy</button>
-      <pre id="js-result">Result will be here...</pre>
+      <div class="generator">
+        <div class="generator-review">
+          <div class="generator-review__content">
+            <div id="js-result"></div>
+            <div class="generator-actions">
+              <button class="btn btn-small btn-dark" id="js-copy">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="btn-icon"
+                >
+                  <path
+                    d="M14 7V7C14 6.06812 14 5.60218 13.8478 5.23463C13.6448 4.74458 13.2554 4.35523 12.7654 4.15224C12.3978 4 11.9319 4 11 4H8C6.11438 4 5.17157 4 4.58579 4.58579C4 5.17157 4 6.11438 4 8V11C4 11.9319 4 12.3978 4.15224 12.7654C4.35523 13.2554 4.74458 13.6448 5.23463 13.8478C5.60218 14 6.06812 14 7 14V14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="10"
+                    y="10"
+                    width="10"
+                    height="10"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Copy</span>
+              </button>
+              <button
+                class="generator__refresh-button btn btn-small btn-dark"
+                id="js-generate"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="btn-icon"
+                >
+                  <path
+                    d="M10 19L9.29289 18.2929L8.58579 19L9.29289 19.7071L10 19ZM13.2929 14.2929L9.29289 18.2929L10.7071 19.7071L14.7071 15.7071L13.2929 14.2929ZM9.29289 19.7071L13.2929 23.7071L14.7071 22.2929L10.7071 18.2929L9.29289 19.7071Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M5.93782 15.5C5.16735 14.1655 4.85875 12.6141 5.05989 11.0863C5.26102 9.55856 5.96064 8.13986 7.05025 7.05025C8.13986 5.96064 9.55856 5.26102 11.0863 5.05989C12.6141 4.85875 14.1655 5.16735 15.5 5.93782C16.8345 6.70829 17.8775 7.89757 18.4672 9.32122C19.0568 10.7449 19.1603 12.3233 18.7615 13.8117C18.3627 15.3002 17.4838 16.6154 16.2613 17.5535C15.0388 18.4915 13.5409 19 12 19"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Refresh</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <footer class="footer">
+      <p>
+        Developed by <a href="https://twitter.com/pavelkeyzik">@pavelkeyzik</a>
+      </p>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

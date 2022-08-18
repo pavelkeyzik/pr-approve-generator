@@ -1,0 +1,35 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #fafafa;
+  color: black;
+  border-radius: 8px;
+  font: inherit;
+  border: none;
+  min-height: 46px;
+  min-width: 46px;
+  cursor: pointer;
+
+  &-small {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  &-dark {
+    background: var(--neutral-1);
+    color: var(--white);
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background: var(--white);
+      color: var(--neutral-1);
+    }
+  }
+
+  &-icon {
+    width: 16px;
+  }
+}

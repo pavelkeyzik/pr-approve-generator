@@ -22,8 +22,12 @@ function setupGenerator(config) {
     navigator.clipboard.writeText(output.textContent);
   }
 
+  // Subscribe to click events
   generateButton.addEventListener("click", generateNewMessage);
   copyButton.addEventListener("click", copyMessageToClipboard);
+
+  // Just to generate the first message
+  generateNewMessage();
 }
 
 export { setupGenerator };
