@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints";
+
 .generator {
   display: flex;
   align-items: center;
@@ -6,7 +8,7 @@
   padding: 40px;
   min-height: 480px;
   border-radius: 16px;
-  background-color: #1b202c;
+  background-color: var(--neutral-2);
   background-image: radial-gradient(
       at 33% 60%,
       hsla(321, 95%, 58%, 1) 0,
@@ -60,13 +62,18 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     line-height: 1.8rem;
     align-items: center;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.6);
     font-size: 1rem;
+    background: var(--black-alpha-60);
+
+    @include breakpoints.media-tablet-and-above {
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+    }
   }
 }
 
