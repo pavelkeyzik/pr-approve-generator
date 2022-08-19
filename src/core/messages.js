@@ -1,5 +1,4 @@
 const messages = [
-  "LGTM 🎉",
   "Nice job 👍",
   "Looks good 👍",
   "Clean fix! ✨",
