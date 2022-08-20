@@ -13,6 +13,8 @@ const messages = [
   "Amazing Job 🥇 It was a complex task you've pulled off!",
   "Great work on this! 🚀 💯",
   "Looking good so far 🎉",
+  "I think this is a good change",
+  "This is looking ✨",
 ];
 
 export { messages };
