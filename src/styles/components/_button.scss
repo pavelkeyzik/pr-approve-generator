@@ -33,3 +33,17 @@
     width: 16px;
   }
 }
+
+.icon-copied {
+  display: none;
+}
+
+.btn-copied {
+  .icon-copy {
+    display: none;
+  }
+
+  .icon-copied {
+    display: block;
+  }
+}

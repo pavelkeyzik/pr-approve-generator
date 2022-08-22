@@ -15,10 +15,12 @@ function setupGenerator(config) {
   const randomizer = buildRandomizer();
 
   function generateNewMessage() {
+    copyButton.classList.remove("btn-copied");
     output.innerText = randomizer.getRandomMessage();
   }
 
   function copyMessageToClipboard() {
+    copyButton.classList.add("btn-copied");
     navigator.clipboard.writeText(output.textContent);
   }
 
