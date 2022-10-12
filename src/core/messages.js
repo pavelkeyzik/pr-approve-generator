@@ -15,6 +15,9 @@ const messages = [
   "Looking good so far 🎉",
   "I think this is a good change",
   "This is looking ✨",
+  "Superb work! You completed a challenging task 🔥",
+  "Excellent work 👍🏼",
+  "This is an excellent improvement 💯",
 ];
 
 export { messages };
