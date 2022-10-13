@@ -18,6 +18,7 @@ const messages = [
   "Superb work! You completed a challenging task 🔥",
   "Excellent work 👍🏼",
   "This is an excellent improvement 💯",
+  "Nice and tidy, great job! 💪",
 ];
 
 export { messages };
