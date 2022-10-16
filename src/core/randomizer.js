@@ -1,8 +1,6 @@
-import { messages } from "./messages";
-
-function buildRandomizer() {
+function buildRandomizer(messages) {
   const state = {
-    currentMessage: messages[0],
+    messages: [...messages],
     messagesState: messages.slice(1),
   };
 
@@ -10,10 +8,8 @@ function buildRandomizer() {
     getRandomMessage() {
       const { messagesState } = state;
       const index = Math.floor(Math.random() * messagesState.length);
-
       let newMessage;
       let newMessagesState;
-
       if (messagesState.length !== 0) {
         newMessage = messagesState[index];
         newMessagesState = [
@@ -27,11 +23,9 @@ function buildRandomizer() {
           ...messages.slice(index + 1),
         ];
       }
-
       state.messagesState = newMessagesState;
       state.currentMessage = newMessage;
-
-      return state.currentMessage;
+      return { newMessage, newMessagesState };
     },
   };
 }
