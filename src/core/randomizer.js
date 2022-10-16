@@ -15,13 +15,13 @@ function buildRandomizer() {
       let newMessagesState;
 
       if (messagesState.length !== 0) {
-        newMessage = messagesState.at(index);
+        newMessage = messagesState[index];
         newMessagesState = [
           ...messagesState.slice(0, index),
           ...messagesState.slice(index + 1),
         ];
       } else {
-        newMessage = messages.at(index);
+        newMessage = messages[index];
         newMessagesState = [
           ...messages.slice(0, index),
           ...messages.slice(index + 1),
