@@ -1,6 +1,6 @@
 function buildRandomizer(messages) {
   const state = {
-    messages: [...messages],
+    messages: messages,
     messagesState: messages.slice(1),
   };
 
