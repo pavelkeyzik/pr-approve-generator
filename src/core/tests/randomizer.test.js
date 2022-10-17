@@ -1,11 +1,22 @@
 import { expect, it } from "vitest";
-// Uncomment this line and start to work on this unit test
-// import { buildRandomizer } from '../randomizer'
+import { buildRandomizer } from "../randomizer";
 
-// TODO: Check that when we generate random message is always unique
-// The logic here is that for example we have 5 messages, we generated one
-// and removed from messages array, until our array will be empty.
-// When it's empty we just replaces this array with the initial array
 it("should always return unique message", () => {
-  expect(true).toBe(true);
+  const messages = ["1", "2", "3", "4", "5"];
+  const randomizer = buildRandomizer(messages);
+
+  const { newMessage, newMessagesState } = randomizer.getRandomMessage();
+  expect(newMessagesState).not.toContain(newMessage);
+});
+
+it("should return initial array when the array is empty", () => {
+  const messages = ["1", "2", "3", "4", "5"];
+  const randomizer = buildRandomizer(messages);
+
+  for (let i = 0; i < messages.length; i++) {
+    const { newMessagesState } = randomizer.getRandomMessage();
+    if (i === messages.length - i) {
+      expect(newMessagesState).toEqual(messages);
+    }
+  }
 });

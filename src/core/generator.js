@@ -1,5 +1,5 @@
 import { buildRandomizer } from "./randomizer";
-
+import { messages } from "./messages";
 /**
  * Setup generator function that takes some config and adds logic to generate message
  *
@@ -12,11 +12,12 @@ function setupGenerator(config) {
   const generateButton = document.querySelector(config.generateButtonSelector);
   const copyButton = document.querySelector(config.copyButtonSelector);
   const output = document.querySelector(config.resultContainer);
-  const randomizer = buildRandomizer();
+  const randomizer = buildRandomizer(messages);
 
   function generateNewMessage() {
     copyButton.classList.remove("btn-copied");
-    output.innerText = randomizer.getRandomMessage();
+    const { newMessage } = randomizer.getRandomMessage();
+    output.innerText = newMessage; // message
   }
 
   function copyMessageToClipboard() {

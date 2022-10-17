@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.24.3",
     "sass": "^1.54.4",
     "vite": "^3.0.7",
     "vitest": "^0.24.1"
