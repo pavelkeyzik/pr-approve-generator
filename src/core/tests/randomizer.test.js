@@ -15,6 +15,8 @@ it("should return initial array when the array is empty", () => {
 
   for (let i = 0; i < messages.length; i++) {
     const { newMessagesState } = randomizer.getRandomMessage();
-    if (i === messages.length - i) expect(newMessagesState).toEqual(messages);
+    if (i === messages.length - i) {
+      expect(newMessagesState).toEqual(messages);
+    }
   }
 });
