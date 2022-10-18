@@ -5,7 +5,6 @@ const messages = [
   "Well done 👍",
   "Thank you! Really nice PR ❤️",
   "Great job 👍",
-  "Great job 💯",
   "Looks amazing 🔥",
   "Thank you! I'm so happy that we finally did this 😍",
   "Looks nice! 😍",
