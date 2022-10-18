@@ -19,7 +19,7 @@ const messages = [
   "Excellent work 👍🏼",
   "This is an excellent improvement 💯",
   "Nice and tidy, great job! 💪",
-  "This project is so out of the ordinary 🎃",
+  "I'm happy to get a PR from you 🎃",
 ];
 
 export { messages };
