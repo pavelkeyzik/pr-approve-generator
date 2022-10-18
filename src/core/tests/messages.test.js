@@ -3,16 +3,12 @@ import { messages } from "../messages";
 
 it("should have unique messages regardless of the emojis", () => {
   const regex = /([a-zA-Z0-9 ])/g;
-
   const uniqueMessages = messages.map((message) =>
-    message.match(regex).join("")
+    message.match(regex).join("").toLowerCase()
   );
-  expect(uniqueMessages).toEqual([...new Set(uniqueMessages)]);
 
-  uniqueMessages.forEach((message) => {
-    if (message.toUpperCase() === message)
-      expect(uniqueMessages).not.toContain(message);
-  });
+  expect(uniqueMessages).toEqual([...new Set(uniqueMessages)]);
+  expect(uniqueMessages.length).toBe(messages.length);
 });
 
 it("should never contain the message LGTM", () => {
