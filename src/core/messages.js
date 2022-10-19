@@ -18,6 +18,9 @@ const messages = [
   "Excellent work",
   "This is an excellent improvement",
   "Nice and tidy, great job!",
+  "Outstanding job!",
+  "Nicely done!"
+  "Way to go!"
 ];
 
 export { messages };
