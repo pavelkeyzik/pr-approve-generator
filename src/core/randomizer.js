@@ -1,9 +1,10 @@
-function buildRandomizer(messages) {
+function buildRandomizer(messages, emojis) {
   const state = {
     messages: messages,
     messagesState: messages.slice(1),
+    emojis: emojis,
+    emojisState: emojis.slice(1),
   };
-
   return {
     getRandomMessage() {
       const { messagesState } = state;
@@ -24,8 +25,25 @@ function buildRandomizer(messages) {
         ];
       }
       state.messagesState = newMessagesState;
-      state.currentMessage = newMessage;
       return { newMessage, newMessagesState };
+    },
+    getRandomEmoji() {
+      const { emojisState } = state;
+      const index = Math.floor(Math.random() * emojisState.length);
+      let newEmoji;
+      let newEmojiState;
+      if (emojisState.length !== 0) {
+        newEmoji = emojisState[index];
+        newEmojiState = [
+          ...emojisState.slice(0, index),
+          ...emojisState.slice(index + 1),
+        ];
+      } else {
+        newEmoji = emojis[index];
+        newEmojiState = [...emojis.slice(0, index), ...emojis.slice(index + 1)];
+      }
+      state.emojisState = newEmojiState;
+      return { newEmoji };
     },
   };
 }
