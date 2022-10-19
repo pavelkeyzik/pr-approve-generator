@@ -1,5 +1,6 @@
 import { buildRandomizer } from "./randomizer";
-import { messages, emojis } from "./messages";
+import { messages } from "./messages";
+import { emojis } from "./emojis";
 /**
  * Setup generator function that takes some config and adds logic to generate message
  *
@@ -16,24 +17,24 @@ function setupGenerator(config) {
   const copyButton = document.querySelector(config.copyButtonSelector);
   const output = document.querySelector(config.resultContainer);
   const emojiOutput = document.querySelector(config.resultEmojiContainer);
-  const randomizer = buildRandomizer(messages);
-  let index = 0;
-  function generateNewMessage() {
-    copyButton.classList.remove("btn-copied");
-    const { newMessage } = randomizer.getRandomMessage();
-    output.innerText = newMessage;
-  }
+  const randomizer = buildRandomizer(messages,emojis);
+
   function generateNewEmoji() {
     copyButton.classList.remove("btn-copied");
-    console.log(index);
-    emojiOutput.innerHTML = emojis[index];
-    if (index >= emojis.length - 1) index = 0;
-    else ++index;
+    const { newEmoji } = randomizer.getRandomEmoji();
+    emojiOutput.innerHTML =  newEmoji;
+  }
+
+  function generateNewMessage() {
+    copyButton.classList.remove("btn-copied");
+    generateNewEmoji();
+    const { newMessage } = randomizer.getRandomMessage();
+    output.innerText = newMessage;
   }
 
   function copyMessageToClipboard() {
     copyButton.classList.add("btn-copied");
-    navigator.clipboard.writeText(output.textContent);
+    navigator.clipboard.writeText(`${output.textContent} ${emojiOutput.textContent}`);
   }
 
   // Subscribe to click events

@@ -19,6 +19,5 @@ const messages = [
   "This is an excellent improvement",
   "Nice and tidy, great job!",
 ];
-const emojis = ["👍", "✨", "❤️", "🔥", "😍", "💪", "🥇", "🚀", "🎉", " "];
 
-export { messages, emojis };
+export { messages };
