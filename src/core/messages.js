@@ -21,6 +21,7 @@ const messages = [
   "Outstanding job!",
   "Nicely done!",
   "Way to go!",
+  "Good feature, let's merge it!"
 ];
 
 export { messages };
