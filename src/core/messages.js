@@ -24,4 +24,4 @@ const messages = [
   "Good feature, let's merge it!",
 ];
 
-export default messages;
+export { messages };

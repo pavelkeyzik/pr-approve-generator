@@ -1,3 +1,3 @@
 const emojis = ['👍', '✨', '❤️', '🔥', '😍', '💪', '🥇', '🚀', '🎉', '💯'];
 
-export default { emojis };
+export { emojis };

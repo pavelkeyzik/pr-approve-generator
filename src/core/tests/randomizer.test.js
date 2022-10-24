@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import buildRandomizer from '../randomizer';
+import { buildRandomizer } from '../randomizer';
 
 describe('Rules for generated messages in randomizer', () => {
   it('should always return unique message', () => {

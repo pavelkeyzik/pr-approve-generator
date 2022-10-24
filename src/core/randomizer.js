@@ -48,4 +48,4 @@ function buildRandomizer(messages, emojis) {
   };
 }
 
-export default buildRandomizer;
+export { buildRandomizer };

@@ -1,6 +1,6 @@
-import buildRandomizer from './randomizer';
-import messages from './messages';
-import emojis from './emojis';
+import { buildRandomizer } from './randomizer';
+import { messages } from './messages';
+import { emojis } from './emojis';
 /**
  * Setup generator function that takes some config and adds logic to generate message
  *
@@ -46,4 +46,4 @@ function setupGenerator(config) {
   generateNewMessage();
 }
 
-export default { setupGenerator };
+export { setupGenerator };

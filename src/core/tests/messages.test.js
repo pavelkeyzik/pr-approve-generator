@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import messages from '../messages';
+import { messages } from '../messages';
 
 it('should have unique messages regardless of the emojis', () => {
   const regex = /([a-zA-Z0-9 ])/g;
