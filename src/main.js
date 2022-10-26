@@ -1,4 +1,4 @@
-import setupGenerator from './core/generator';
+import { setupGenerator } from './core/generator';
 
 setupGenerator({
   generateButtonSelector: '#js-generate',
