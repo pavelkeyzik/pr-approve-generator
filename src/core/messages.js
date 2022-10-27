@@ -6,10 +6,10 @@ const messages = [
   'Thank you! Really nice PR',
   'Great job',
   'Looks amazing',
-  "Thank you! I'm so happy that we finally did this",
+  'Thank you! I\'m so happy that we finally did this',
   'Looks nice!',
   'Nice refactor!',
-  "Amazing Job 🥇 It was a complex task you've pulled off!",
+  'Amazing Job 🥇 It was a complex task you\'ve pulled off!',
   'Great work on this!',
   'Looking good so far',
   'I think this is a good change',
@@ -21,7 +21,7 @@ const messages = [
   'Outstanding job!',
   'Nicely done!',
   'Way to go!',
-  "Good feature, let's merge it!",
+  'Good feature, let\'s merge it!',
 ];
 
 export { messages };
