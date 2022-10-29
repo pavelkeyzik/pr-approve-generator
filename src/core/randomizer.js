@@ -1,8 +1,8 @@
 function buildRandomizer(messages, emojis) {
   const state = {
-    messages: messages,
+    messages,
     messagesState: messages.slice(1),
-    emojis: emojis,
+    emojis,
     emojisState: emojis.slice(1),
   };
   return {

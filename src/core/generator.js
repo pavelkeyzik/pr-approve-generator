@@ -1,6 +1,6 @@
-import { buildRandomizer } from "./randomizer";
-import { messages } from "./messages";
-import { emojis } from "./emojis";
+import { buildRandomizer } from './randomizer';
+import { messages } from './messages';
+import { emojis } from './emojis';
 /**
  * Setup generator function that takes some config and adds logic to generate message
  *
@@ -17,30 +17,30 @@ function setupGenerator(config) {
   const copyButton = document.querySelector(config.copyButtonSelector);
   const output = document.querySelector(config.resultContainer);
   const emojiOutput = document.querySelector(config.resultEmojiContainer);
-  const randomizer = buildRandomizer(messages,emojis);
+  const randomizer = buildRandomizer(messages, emojis);
 
   function generateNewEmoji() {
-    copyButton.classList.remove("btn-copied");
+    copyButton.classList.remove('btn-copied');
     const { newEmoji } = randomizer.getRandomEmoji();
-    emojiOutput.innerHTML =  newEmoji;
+    emojiOutput.innerHTML = newEmoji;
   }
 
   function generateNewMessage() {
-    copyButton.classList.remove("btn-copied");
+    copyButton.classList.remove('btn-copied');
     generateNewEmoji();
     const { newMessage } = randomizer.getRandomMessage();
     output.innerText = newMessage;
   }
 
   function copyMessageToClipboard() {
-    copyButton.classList.add("btn-copied");
+    copyButton.classList.add('btn-copied');
     navigator.clipboard.writeText(`${output.textContent} ${emojiOutput.textContent}`);
   }
 
   // Subscribe to click events
-  generateButton.addEventListener("click", generateNewMessage);
-  generateEmojiButton.addEventListener("click", generateNewEmoji);
-  copyButton.addEventListener("click", copyMessageToClipboard);
+  generateButton.addEventListener('click', generateNewMessage);
+  generateEmojiButton.addEventListener('click', generateNewEmoji);
+  copyButton.addEventListener('click', copyMessageToClipboard);
 
   // Just to generate the first message
   generateNewMessage();

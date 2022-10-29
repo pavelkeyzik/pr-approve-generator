@@ -8,10 +8,15 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint" : "eslint .",
+    "lint-fix" : "eslint --fix ."
   },
   "devDependencies": {
     "@vitest/coverage-istanbul": "^0.24.3",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "sass": "^1.54.4",
     "vite": "^3.0.7",
     "vitest": "^0.24.1"
